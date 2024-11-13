@@ -1,0 +1,141 @@
+{
+    "link": "https://code.visualstudio.com/docs/editor/tasks",
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "count-files",
+            "type": "shell",
+            "command": "git ls-tree -r master --name-only | wc -l",
+            "presentation": {
+                "group": "info"
+            }
+        },
+        {
+            "label": "15_contract-mint-and-list-(local)",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/mint-and-list.js --network localhost",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": true
+            }
+        },
+        {
+            "label": "15_contract-mint-and-list-(rinkeby)",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/mint-and-list.js --network rinkeby",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": false
+            }
+        },
+        {
+            "label": "15_contract-mint-and-list-(goerli)",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/mint-and-list.js --network goerli",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": false
+            }
+        },
+        {
+            "label": "15_contract-cancel",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/cancel.js --network localhost",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": true
+            }
+        },
+        {
+            "label": "15_contract-buy",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/buy.js --network localhost",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": true
+            }
+        },
+        {
+            "label": "15_contract-mine",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh run scripts/mine.js --network localhost",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-tasks",
+                "close": true
+            }
+        },
+        {
+            "label": "15_nextjs-moralis",
+            "type": "shell",
+            "command": "cd 15b-nft-marketplace-nextjs-moralis && yarn dev",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-watch-fe"
+            }
+        },
+        {
+            "label": "15_moralis-moralis-sync",
+            "type": "shell",
+            "command": "cd 15b-nft-marketplace-nextjs-moralis && yarn moralis:sync",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-watch"
+            }
+        },
+        {
+            "label": "15_moralis-moralis-cloud",
+            "type": "shell",
+            "command": "cd 15b-nft-marketplace-nextjs-moralis && yarn moralis:cloud",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "15-develop-tasks"
+            }
+        },
+        {
+            "label": "15_contract-hh-node",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh node",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-watch"
+            }
+        },
+        {
+            "label": "15_contract-hh-deploy-frontend",
+            "type": "shell",
+            "command": "cd 15a-nft-marketplace-contract && hh deploy --tags frontend --network localhost",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-deploy",
+                "close": true
+            }
+        },
+        {
+            "label": "15_nextjs-the-graph",
+            "type": "shell",
+            "command": "cd 15c-nft-marketplace-nextjs-thegraph && yarn dev",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "15-develop-watch-fe"
+            }
+        }
+    ]
+}

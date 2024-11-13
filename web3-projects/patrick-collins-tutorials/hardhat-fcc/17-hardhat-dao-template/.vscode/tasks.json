@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "hh-node",
+            "type": "shell",
+            "command": "hh node"
+        },
+        {
+            "label": "hh-console",
+            "type": "shell",
+            "command": "hh console --network localhost"
+        },
+        {
+            "label": "scripts-1-propose",
+            "type": "shell",
+            "command": "hh run scripts/propose.ts --network localhost"
+        },
+        {
+            "label": "scripts-2-vote",
+            "type": "shell",
+            "command": "hh run scripts/vote.ts --network localhost"
+        },
+        {
+            "label": "scripts-3-queue-and-execute",
+            "type": "shell",
+            "command": "hh run scripts/queue-and-execute.ts --network localhost"
+        }
+    ]
+}
