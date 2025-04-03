@@ -1,0 +1,14 @@
+{
+  "name": "queue-processing-system",
+  "version": "1.0.0",
+  "description": "Example of queue processing using child processes and worker threads",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "child-process": "node main.js child-process",
+    "worker-threads": "node main.js worker-threads"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  }
+}
